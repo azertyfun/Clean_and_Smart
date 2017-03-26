@@ -65,13 +65,13 @@
 
             <hr />
 
-            <label class="item" id="lblForecastIoApiKey" style="display:none">
-                Forecast.io API Key
+            <label class="item" id="lblOWMApiKey" style="display:none">
+                OpenWeatherMap API Key
                 <div class="item-input-wrapper item-input-wrapper-button">
-                    <input type="text" id="xtxtForecastIoApiKey" class="item-input" placeholder="API KEY" style="color:black">
+                    <input type="text" id="xtxtOWMApiKey" class="item-input" placeholder="API KEY" style="color:black">
                 </div>
                 <div style="font-size:small;">
-                    Register at https://developer.forecast.io to receive API Key. This is a one time procedure, no billing information required there.
+                    Register at https://openweathermap.org to receive API Key. This is a one time procedure, no billing information required there.
                  </div>
             </label>
 
@@ -245,7 +245,7 @@
                     woeid: getURLVariable('version') >= '2.22' ? '' : 0,
                     weatherInterval: 60,
                     language: 255,
-                    forecastIoApiKey: ''
+                    OWMApiKey: ''
                 };
             }
 
@@ -293,10 +293,10 @@
                 }
 
                 //showing input box for Forecast IO API Key
-                $('#lblForecastIoApiKey').show();
+                $('#lblOWMApiKey').show();
 
                 //restoring saved API key
-                $('#xtxtForecastIoApiKey').val(settings.forecastIoApiKey? settings.forecastIoApiKey: '');
+                $('#xtxtOWMApiKey').val(settings.OWMApiKey? settings.OWMApiKey: '');
             }
 
             //assigning save button
@@ -312,7 +312,7 @@
                 }
 
                 settings.woeid = getURLVariable('version') >= '2.18' ? $('#xtxtWOEID').val() : parseInt($('#xtxtWOEID').val());
-                settings.forecastIoApiKey = $('#xtxtForecastIoApiKey').val();
+                settings.OWMApiKey = $('#xtxtOWMApiKey').val();
 
                 localStorage.setItem("clean_smart_settings", JSON.stringify(settings));
 

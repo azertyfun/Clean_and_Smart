@@ -106,9 +106,6 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "chalk",
             "diorite"
         ],
         "uuid": "4d4935d2-a1bb-407e-bb71-d4ed5cae4861",
@@ -116,5 +113,5 @@
             "watchface": true
         }
     },
-    "version": "2.29.0"
+    "version": "2.30.0"
 }
